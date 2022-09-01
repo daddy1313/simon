@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SIMON</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJCAMAAAAv+uv7AAAAS1BMVEX///9pgG1geWRlfWl8j3/p7On29/bY3dmAkoPu8e/7+/padV+SoZRyiHbHzsiir6RSb1iotKrO1M+8xb6YppqGl4mMnI+zvbTj5uMau9nhAAAFK0lEQVR4nO2a2cKDKAyFJVFRKYq77/+ko7KIWsHa/jNzwblzAT4JhASMoqCgoKCgoKCgoKCgoKCgoKAr5eUq+qBoKos2764eiAqYxYYHRZO1KMTyKmfrFS8ekzAyC19PSGAtmimS9YrEgSSQBJJAEkXFVA9x1jX56aWcjkMW91W5e3SHJC+rPo6Hmp4rvSahvQAkiAyr/StpTRjg/AgYvKZPSJphLoJkKUm65C7JyJAoAbdLNQyIEYrKNOUjSfqtyqVk7TacIukaRqxSfHuhtR8smGaJ8pBQDvuSbHCaSJFkMe6aq02PHKqbn2njuUkmwFNJHjlEd32xFVL4qQZBMDWL5gZJyk1luJm9u0UCJO65LsVa+bhWJBBXda8eomrNSVLpgsj7zMAwR/hiSNiYLrUPsgblYFSXIF8jqbyXl6z0kuSqWlatk42qkiT2k4AOvTK06lfDFfVQUw97L4nqSxh1OwPumrkm2SzYqhqXHop62bKpj8r6hI+kiImFvH6hIjn4qjMJGo81WSQ5l8W32SfRGPWQJELaxvKDo7Ksj0R2gV1jaroAybE+2ekOkvboXMwXikufovzJFlGnFkmjH6ZKRSnvVB6SCrfXdL3SYNez57QW2yTq01AYKVt2HhJpxG28LnrJe+0jkvHkYKVwKG6R7FrtZD/V0YWekfSpm0TOdijfkFxOnlskeFTmIekvSeBZn6hxwk/y9cm1dfZj5zaJnClXg8xBMpy/v3hHd5uEyrYuVlAHiXT2u+hYeUl2uRfgJJnkMLkIKxwkKu7CdHtbuVBxGbg5SdTyAVswWSgX5yFJZbPMMoU0GF4HS06SqIPDzLON7VqL1dLLjW9vjovzhyRUrmRmOqrJJHx9YryzXnmotLO10n5IUsR6MV8MlNS7EMIZs+mWYaTT1HQ6CnKEj26SqNRB4OJUiHa5k5/EROJrvmMiWUfS4yGJ3gTGTLkJd2zfvVkpxM7pfkhixej6I/W7nnxnOKGw6+F6gyRKDgmUAfHmgN0+48Fr9ypJxLKigRUpsfXGFsSlnTBVIoitukS9qUjUleW5GtzSURTx9bSR1XXVoq3+Qt6wk9i87olgs7Af7dvri9WogU/l5gH/4ks5BnHn4birNJlo2dDk882RfKLNXDD1vxkUFBQUFBQUZCn3nTN8r+JWEzTGv0YpBnIjaBsFHjZdfi7KAZkfJV8yGUfC+r3GJSSHG/8urPka6/4q1sxfSyZzr9fX7Q7AJz9c+FWuqQa7aX6Z2oPnfOyJJnmKwdxZlyW5CwD8R1mJ0SiTNnceupc6PxHeI8xP1MLuQOim1N4rkPZHI7coY7Wd86mL0IegjN+2qUtlrJPiz31VoxNxgNF/5O1U0oLhcO3eXImavRLg3YMcWKmYXmb3iUD/6KPS3pyUoujbR4OX1lxs+ybi+rTNo3rbfUEAPk4fDd+k6RDss3/+/KeyiBK7JoDs1d6yU5E2VU/Ybv8Jsq9cQtqxw6aUYH3VNtOVvdOkaesXEexwfI/fL6o0Pu7VzX2zNMP7rh7bsmwWlWU71l3P5WM87gsivL6cf4uK8fx3wlo7LkhMa8E7EWgO8sUIsZVW8GY79bYY+YlzlMor8pRlnnK/DXWSEdj7vncJGbQ/GCBHze7hIxgENvxVQJy3Gbk5ZBCQ18/XiBtKyg7EeZoeMQSp6V9iKOXl7DnY0XdJhuXnsrj7i8FxoSKfmvEV87VtqdWb8KH+j7ag04TSpmxnzc52yv8FgwQFBQUFBQUFBQUF/c/1D+5fPxHp6Dx6AAAAAElFTkSuQmCC">
+        <br>
+        <form action ="greet" method= "post" >
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name ="name_input">
+            <br>
+            <input type="submit" value="GREET" id="greet">
+        </form>
+    </body>    
+</html>

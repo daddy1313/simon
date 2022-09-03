@@ -1,9 +1,12 @@
 body{
-    background-color:darkslateblue;
+    background-color:slategray;
     text-align:center;
 }
 p{
     font-family:Cool Jazz;
     font-size:40px;
 }
-}
+h1{
+   font-family:Cool Jazz;
+   font-size:70px;
+
